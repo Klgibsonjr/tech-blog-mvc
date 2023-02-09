@@ -7,6 +7,24 @@
     <title>Tech Blog</title>
   </head>
   <body>
-    <header class='text-8xl'>TECH BLOG</header>
+    <header class='flex justify-between items-center'>
+      <h1 class='text-7xl m-6 hover:font-bold'><a href='/'>The Tech Blog</a></h1>
+      <nav class='flex justify-between'>
+        <ul class='flex gap-4 m-6'>
+          <li class='text-3xl font-bold hover:text-red-700'><a
+              href='/'
+            >Home</a></li>
+          <li class='text-3xl font-bold hover:text-red-700'><a
+              href='/dashboard'
+            >Dashboard</a></li>
+          <li class='text-3xl font-bold hover:text-red-700'><a href='/login'>Log
+              In</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
   </body>
 </html>
