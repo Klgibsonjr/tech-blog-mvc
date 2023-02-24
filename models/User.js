@@ -29,12 +29,12 @@ User.init(
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
-      beforeUpdate: async (updateUserData) => {
-        updateUserData.password = await bcrypt.hash(
-          updateUserData.password,
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
           10
         );
-        return updateUserData;
+        return updatedUserData;
       },
     },
     sequelize,
@@ -44,3 +44,5 @@ User.init(
     modelName: 'User',
   }
 );
+
+module.exports = User;

@@ -4,10 +4,10 @@
 
     <form class='flex justify-center flex-col gap-4'>
       <div class='w-full'>
-        <label for='email' class='text-4xl mr-4 mb-4'>Email:</label>
+        <label for='email' id='username-input' class='text-4xl mr-4 mb-4'>Username:</label>
         <input
           type='email'
-          class='w-full rounded-md p-4 mt-4 text-2xl'
+          class='w-full rounded-md p-2 mt-4 text-xl'
           placeholder='Enter email here'
         />
       </div>
@@ -15,9 +15,14 @@
         <label for='password' class='text-4xl mr-4 mb-4'>Password:</label>
         <input
           type='password'
-          class='w-full rounded-md p-4 mt-4 text-2xl'
+          id='password-input'
+          class='w-full rounded-md p-2 mt-4 text-xl'
           placeholder='Enter your password here'
         />
+      </div>
+      <div class='flex justify-between items-center'>        
+      <button type='submit' id='login-btn' class='bg-gray-500 hover:bg-gray-700 font-bold py-2 px-4 border border-black rounded w-24'>Submit</button>
+      <p class='font-semibold text-xl'>Don't have an accout, <a type="button" class='text-red-600 hover:underline hover:font-extrabold' href="/signup">Sign up here!</a></p>
       </div>
     </form>
   </div>
