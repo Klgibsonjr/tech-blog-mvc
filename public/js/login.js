@@ -8,7 +8,7 @@ const loginFormHandler = async (event) => {
     .querySelector('#password-input-login')
     .value.trim();
 
-  const reponse = await fetch('/api/user/login', {
+  const response = await fetch('/api/user/login', {
     method: 'POST',
     body: JSON.stringify({ loginUsername, loginPassword }),
     header: { 'Content-type': 'application/json' },
@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(reponse.statusText);
+    alert(response.statusText);
   }
 };
 
